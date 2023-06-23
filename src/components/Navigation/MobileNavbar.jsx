@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
+import { NavLink } from 'react-router-dom';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 
 const MobileNavbar = ({ setToggleMenu }) => {
   return (
@@ -18,46 +18,46 @@ const MobileNavbar = ({ setToggleMenu }) => {
         role="menu"
         className="flex flex-col items-center justify-center  space-y-3 text-2xl md:text-3xl  text-primaryGreen font-bold font-markazi ">
         <li className="hover:text-lightOrange">
-          <Link
-            to={'/'}
+          <NavLink
+            to={'/home'}
             role="menuitem">
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:text-lightOrange">
-          <Link
+          <NavLink
             to={'/about'}
             role="menuitem">
             About
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:text-lightOrange">
-          <Link
+          <NavLink
             to={'/menu'}
             role="menuitem">
             Menu
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:text-lightOrange">
-          <Link
+          <NavLink
             to={'/reservation'}
             role="menuitem">
             Reservation
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:text-lightOrange">
-          <Link
+          <NavLink
             to={'/orderonline'}
             role="menuitem">
             Order Online
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:text-lightOrange">
-          <Link
+          <NavLink
             to={'/login'}
             role="menuitem">
             Log In
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>

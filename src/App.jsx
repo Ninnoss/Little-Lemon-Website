@@ -1,5 +1,5 @@
 // import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components//Navigation/Navbar';
 import './App.css';
 // import images from './data/images';
 // import { FaReact } from 'react-icons/fa';

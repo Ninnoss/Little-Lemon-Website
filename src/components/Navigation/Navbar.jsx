@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import images from '../data/images';
+import { NavLink } from 'react-router-dom';
+import images from '../../data/images';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
@@ -9,13 +9,15 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between md:justify-around items-center p-5 md:px-8 md:py-6 border-b-highlightGrey border-[1px]">
       <div>
-        <Link to={'/'}>
+        <NavLink
+          to={'/home'}
+          end>
           <img
             className="xl:w-[180px]"
             src={images.littleLemonLogo}
             alt="Litte Lemon Logo"
           />
-        </Link>
+        </NavLink>
       </div>
 
       {/* Mobile Menu */}
@@ -25,22 +27,26 @@ const Navbar = () => {
       <div className="hidden md:block">
         <ul className="flex text-2xl space-x-4 lg:space-x-14  text-primaryGreen font-bold font-markazi ">
           <li className="hover:text-lightOrange">
-            <Link to={'/'}>Home</Link>
+            <NavLink
+              to="/home"
+              end>
+              Home
+            </NavLink>
           </li>
           <li className="hover:text-lightOrange">
-            <Link to={'/about'}>About</Link>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li className="hover:text-lightOrange">
-            <Link to={'/menu'}>Menu</Link>
+            <NavLink to="/menu">Menu</NavLink>
           </li>
           <li className="hover:text-lightOrange">
-            <Link to={'/reservation'}>Reservation</Link>
+            <NavLink to="/reservation">Reservation</NavLink>
           </li>
           <li className="hover:text-lightOrange">
-            <Link to={'/orderonline'}>Order Online</Link>
+            <NavLink to="/orderonline">Order Online</NavLink>
           </li>
           <li className="hover:text-lightOrange">
-            <Link to={'/login'}>Log In</Link>
+            <NavLink to="/login">Log In</NavLink>
           </li>
         </ul>
       </div>

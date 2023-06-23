@@ -25,3 +25,8 @@
     transform: translateY(0);
   }
 }
+
+/* React Router NavLink active class */
+.active {
+  color: #ee9972;
+}
