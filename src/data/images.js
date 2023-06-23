@@ -4,7 +4,10 @@ import marioAdrianA from '../assets/Imgs/Mario and Adrian A.jpg';
 import marioAdrianB from '../assets/Imgs/Mario and Adrian b.jpg';
 import restauranFood from '../assets/Imgs/restauranfood.jpg';
 import restaurant from '../assets/Imgs/restaurant.jpg';
-import littleLemonLogo from '../assets/Imgs/Logo.svg';
+import headerLogo from '../assets/Imgs/Header-logo-yellow.svg';
+import FlyingPasta from '../assets/Imgs/Flying-Pasta.webp';
+import pastaFork from '../assets/Imgs/Pasta-Fork.webp';
+import heroDish from '../assets/Imgs/Tomatoes.webp';
 
 export default {
   greekSalad,
@@ -13,5 +16,8 @@ export default {
   marioAdrianB,
   restauranFood,
   restaurant,
-  littleLemonLogo,
+  headerLogo,
+  FlyingPasta,
+  pastaFork,
+  heroDish,
 };

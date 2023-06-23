@@ -14,7 +14,7 @@ const Navbar = () => {
           end>
           <img
             className="xl:w-[180px]"
-            src={images.littleLemonLogo}
+            src={images.headerLogo}
             alt="Litte Lemon Logo"
           />
         </NavLink>
