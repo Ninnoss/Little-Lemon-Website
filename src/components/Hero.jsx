@@ -2,7 +2,7 @@ import images from '../data/images';
 
 const Hero = () => {
   return (
-    <section className="bg-primaryGreen flex flex-col md:flex-row justify-evenly  items-center px-8 py-4">
+    <section className="bg-primaryGreen flex flex-col md:flex-row justify-evenly  items-center px-8 py-4 mb-10">
       <div>
         <h1 className="text-primaryYellow font-markazi text-6xl md:text-8xl pt-3">Little Lemon</h1>
         <span className="font-markazi text-white text-4xl">Chicago</span> <br />
@@ -12,7 +12,7 @@ const Hero = () => {
         <div>
           <button
             className="text-black hover:text-white bg-primaryYellow hover:bg-lightOrange rounded-md shadow-lg font-karla
-        font-bold px-4 py-1.5 md:px-8 md:py-3 mt-4 w-1/2">
+        font-bold px-4 py-1.5 md:px-8 md:py-3 mt-4 w-1/2 transition-all duration-300">
             Reserve Table
           </button>
 
