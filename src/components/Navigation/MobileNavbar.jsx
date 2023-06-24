@@ -7,7 +7,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed top-0 left-0 w-full h-full bg-highlightGrey flex justify-center items-center slide-bottom ">
+      className="fixed top-0 left-0 w-full h-full bg-highlightGrey flex justify-center items-center slide-bottom z-10  ">
       <MdOutlineRestaurantMenu
         size={'2.5rem'}
         className="fixed top-5 right-5 text-lightOrange"

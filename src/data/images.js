@@ -8,6 +8,8 @@ import headerLogo from '../assets/Imgs/Header-logo-yellow.svg';
 import FlyingPasta from '../assets/Imgs/Flying-Pasta.webp';
 import pastaFork from '../assets/Imgs/Pasta-Fork.webp';
 import heroDish from '../assets/Imgs/Tomatoes.webp';
+import pizza from '../assets/Imgs/pizza.png';
+import nat from '../assets/Imgs/Pizza-flying-stuff-nat.png';
 
 export default {
   greekSalad,
@@ -20,4 +22,6 @@ export default {
   FlyingPasta,
   pastaFork,
   heroDish,
+  pizza,
+  nat,
 };
