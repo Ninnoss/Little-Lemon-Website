@@ -1,5 +1,5 @@
 import Card from './Card';
-import { specialsDishes } from '../data/dishes';
+import { specialsDishes } from '../data/dishes'
 import Button from './Button';
 
 const Highlights = () => {
