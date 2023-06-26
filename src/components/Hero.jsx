@@ -1,5 +1,5 @@
 import images from '../data/images';
-
+import Button from './Button';
 const Hero = () => {
   return (
     <section className="bg-primaryGreen flex flex-col md:flex-row justify-evenly  items-center px-8 py-4 mb-10">
@@ -10,14 +10,19 @@ const Hero = () => {
           We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
         </p>
         <div>
-          <button
+          {/* <button
             className="text-black hover:text-white bg-primaryYellow hover:bg-lightOrange rounded-md shadow-lg font-karla
         font-bold px-4 py-1.5 md:px-8 md:py-3 mt-4 w-1/2 transition-all duration-300">
             Reserve Table
-          </button>
+          </button> */}
+          <Button
+            className="mt-4  hover:bg-lightOrange"
+            type="button">
+            Reserve Table
+          </Button>
 
           <img
-            className="hidden md:block h-44  self-start md:ml-7"
+            className="hidden md:block h-44"
             src={images.pastaFork}
             alt="Fork Image pointing at Call to Action Button"
           />

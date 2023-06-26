@@ -1,4 +1,5 @@
 import images from './images';
+
 export const specialsDishes = [
   {
     id: Math.random(),

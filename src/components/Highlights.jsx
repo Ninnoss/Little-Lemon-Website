@@ -1,20 +1,20 @@
 import Card from './Card';
 import { specialsDishes } from '../data/dishes';
+import Button from './Button';
 
 const Highlights = () => {
   return (
-    <section className="h-[40rem] px-4 py-6">
-      <div className="flex items-center justify-evenly">
-        <h2 className="font-karla text-5xl font-semibold ">Specials</h2>
-        <button
-          className="text-black hover:text-white bg-primaryYellow hover:bg-primaryGreen transition-all duration-300  rounded-md shadow-lg font-karla
-        font-bold px-4 py-1.5 md:px-14 md:py-3 mt-4 ">
+    <section className="p-6">
+      <div className="flex items-center justify-center gap-x-14 sm:gap-x-28 md:gap-x-52 lg:gap-x-96 xl:gap-x-[48rem] ">
+        <h2 className="font-karla text-3xl md:text-5xl font-semibold ">Specials</h2>
+        <Button
+          className="hover:bg-primaryGreen"
+          type="button">
           Explore Menu
-        </button>
+        </Button>
       </div>
-
       {/* Cards */}
-      <div className="flex justify-center gap-x-6 py-6">
+      <div className="flex flex-wrap items-center justify-center sm:gap-x-6 md:gap-x-20 lg:gap-x-16 gap-y-12 py-12">
         {specialsDishes.map((dish) => {
           return (
             <Card
