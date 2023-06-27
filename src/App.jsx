@@ -2,6 +2,7 @@
 import Navbar from './components//Navigation/Navbar';
 import './App.css';
 import Hero from './components/Hero';
+import Highlights from './components/Highlights';
 // import images from './data/images';
 // import { FaReact } from 'react-icons/fa';
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Highlights />
       </main>
     </>
   );
