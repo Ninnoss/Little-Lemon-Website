@@ -9,7 +9,8 @@ const Highlights = () => {
         <h2 className="font-karla text-3xl md:text-5xl font-semibold ">Specials</h2>
         <Button
           className="hover:bg-primaryGreen"
-          type="button">
+          type="button"
+          aria-label="Explore Menu">
           Explore Menu
         </Button>
       </div>
