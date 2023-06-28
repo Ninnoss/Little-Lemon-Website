@@ -24,7 +24,7 @@ const Footer = () => {
               <ul className="font-medium text-highlightGrey/80 space-y-1 ">
                 <li>
                   <NavLink
-                    to="/home"
+                    to="/"
                     className=" hover:text-lightOrange">
                     Home
                   </NavLink>

@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="flex justify-between md:justify-around items-center p-5 md:px-8 md:py-6 border-b-highlightGrey border-[1px]">
       <div>
         <NavLink
-          to={'/home'}
+          to={'/'}
           end>
           <img
             className="xl:w-[180px]"
@@ -28,7 +28,7 @@ const Navbar = () => {
         <ul className="flex text-2xl space-x-4 lg:space-x-14  text-primaryGreen font-bold font-markazi ">
           <li className="hover:text-lightOrange">
             <NavLink
-              to="/home"
+              to="/"
               end>
               Home
             </NavLink>

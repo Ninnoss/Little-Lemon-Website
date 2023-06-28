@@ -1,38 +1,34 @@
-// import { Route, Routes } from 'react-router-dom';
-import Navbar from './components//Navigation/Navbar';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Hero from './components/Hero';
-import Highlights from './components/Highlights';
-import Testimonials from './components/Testimonials/Testimonials';
-import AboutUs from './components/AboutUs';
+import Navbar from './components//Navigation/Navbar';
 import Footer from './components/Navigation/Footer';
-// import images from './data/images';
-// import { FaReact } from 'react-icons/fa';
+import Home from './pages/Home';
+import Menu from './pages/Menu';
+import Reservation from './pages/Reservation';
 
 function App() {
   return (
     <>
       <Navbar />
-      <main>
-        <Hero />
-        <Highlights />
-        <Testimonials />
-        <AboutUs />
-      </main>
+
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        />
+        <Route
+          path="/menu"
+          element={<Menu />}
+        />
+        <Route
+          path="/reservation"
+          element={<Reservation />}
+        />
+      </Routes>
+
       <Footer />
     </>
   );
 }
 
 export default App;
-
-/* <Routes>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-        <Route
-          path="/about"
-          element={<About />}
-        />
-      </Routes> */
