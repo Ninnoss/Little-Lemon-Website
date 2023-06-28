@@ -4,6 +4,7 @@ import './App.css';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
 import Testimonials from './components/Testimonials/Testimonials';
+import AboutUs from './components/AboutUs';
 // import images from './data/images';
 // import { FaReact } from 'react-icons/fa';
 
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <Highlights />
         <Testimonials />
+        <AboutUs />
       </main>
     </>
   );
