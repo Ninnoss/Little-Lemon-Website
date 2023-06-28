@@ -34,12 +34,12 @@ const TestimonialsSlider = () => {
             </figcaption>
           </figure>
           <blockquote
-            className="mt-2 text-lg font-medium"
+            className="mt-2 text-lg font-medium flex flex-col"
             aria-label="Review">
             <BiSolidQuoteLeft
               size={40}
               color="#9CA3AF"
-              className="ml-44 mb-4"
+              className="self-center mb-4"
             />
             <p className='text-primaryGreen font-karla '>&quot;{testimonialsData[currentReview].review}&quot;</p>
           </blockquote>
