@@ -3,7 +3,7 @@ import Navbar from './components//Navigation/Navbar';
 import './App.css';
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
-import Testimonials from './components/Testimonials';
+import Testimonials from './components/Testimonials/Testimonials';
 // import images from './data/images';
 // import { FaReact } from 'react-icons/fa';
 
