@@ -1,6 +1,7 @@
 // import { Route, Routes } from 'react-router-dom';
 import Navbar from './components//Navigation/Navbar';
 import './App.css';
+import Footer from './components/Navigation/Footer';
 // import images from './data/images';
 // import { FaReact } from 'react-icons/fa';
 
@@ -13,6 +14,7 @@ function App() {
         <img src={images.lemonDessert}></img>
         <FaReact size={'5rem'} />
       </div> */}
+      <Footer />
     </>
   );
 }

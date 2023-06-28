@@ -12,11 +12,14 @@ const Navbar = () => {
         <NavLink
           to={'/home'}
           end>
-          <img
-            className="xl:w-[180px]"
-            src={images.littleLemonLogo}
-            alt="Litte Lemon Logo"
-          />
+          <figure>
+            <img
+              className="xl:w-[180px]"
+              src={images.littleLemonLogo}
+              alt="Litte Lemon Logo"
+            />
+            <figcaption className="sr-only">Little Lemon Footer Logo</figcaption>
+          </figure>
         </NavLink>
       </div>
 

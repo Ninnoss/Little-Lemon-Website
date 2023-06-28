@@ -5,6 +5,7 @@ import marioAdrianB from '../assets/Imgs/Mario and Adrian b.jpg';
 import restauranFood from '../assets/Imgs/restauranfood.jpg';
 import restaurant from '../assets/Imgs/restaurant.jpg';
 import littleLemonLogo from '../assets/Imgs/Logo.svg';
+import footerLogo from '../assets/Imgs/Footer-Logo-White.webp';
 
 export default {
   greekSalad,
@@ -14,4 +15,5 @@ export default {
   restauranFood,
   restaurant,
   littleLemonLogo,
+  footerLogo,
 };
