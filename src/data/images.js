@@ -5,6 +5,7 @@ import fishTacos from '../assets/Imgs/Fish-Tacos.webp';
 import marioAdrianA from '../assets/Imgs/Mario and Adrian A.jpg';
 import marioAdrianB from '../assets/Imgs/Mario and Adrian b.jpg';
 import restauranFood from '../assets/Imgs/restauranfood.jpg';
+import italianDishes from '../assets/Imgs/pg-italian-dishes.webp';
 import restaurant from '../assets/Imgs/restaurant.jpg';
 import headerLogo from '../assets/Imgs/Header-logo-yellow.svg';
 import FlyingPasta from '../assets/Imgs/Flying-Pasta.webp';
@@ -21,6 +22,7 @@ export default {
   marioAdrianA,
   marioAdrianB,
   restauranFood,
+  italianDishes,
   restaurant,
   headerLogo,
   FlyingPasta,
