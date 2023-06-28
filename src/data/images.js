@@ -8,6 +8,8 @@ import restauranFood from '../assets/Imgs/restauranfood.jpg';
 import italianDishes from '../assets/Imgs/pg-italian-dishes.webp';
 import restaurant from '../assets/Imgs/restaurant.jpg';
 import headerLogo from '../assets/Imgs/Header-logo-yellow.svg';
+import footerLogo from '../assets/Imgs/Footer-Logo-White.webp';
+
 import FlyingPasta from '../assets/Imgs/Flying-Pasta.webp';
 import pastaFork from '../assets/Imgs/Pasta-Fork.webp';
 import heroDish from '../assets/Imgs/Tomatoes.webp';
@@ -25,6 +27,7 @@ export default {
   italianDishes,
   restaurant,
   headerLogo,
+  footerLogo,
   FlyingPasta,
   pastaFork,
   heroDish,
