@@ -1,5 +1,5 @@
-import MenuCategories from '../components/Menu/MenuCategories';
-import MenuHeader from '../components/Menu/MenuHeader';
+import MenuCategories from '../components/MenuPage/MenuCategories';
+import MenuHeader from '../components/MenuPage/MenuHeader';
 
 const Menu = () => {
   return (

@@ -1,5 +1,5 @@
-import images from '../data/images';
-import Button from './Button';
+import images from '../../data/images';
+import Button from '../Button';
 const Hero = () => {
   return (
     <section className="bg-primaryGreen flex flex-col md:flex-row justify-evenly  items-center px-8 py-4 mb-10">

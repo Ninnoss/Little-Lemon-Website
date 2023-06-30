@@ -1,6 +1,6 @@
-import Card from './Card';
-import { specialsDishes } from '../data/specialDishes'
-import Button from './Button';
+import Card from '../Card';
+import { specialsDishes } from '../../data/specialDishes'
+import Button from '../Button';
 
 const Highlights = () => {
   return (

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { BiSolidQuoteLeft } from 'react-icons/bi';
-import { testimonialsData } from '../../data/testimonials';
+import { testimonialsData } from '../../../data/testimonials';
 
 const TestimonialsSlider = () => {
   const [currentReview, setCurrentReview] = useState(0);

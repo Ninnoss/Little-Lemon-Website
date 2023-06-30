@@ -1,4 +1,4 @@
-import MenuItem from '../Menu/MenuItem';
+import MenuItem from '../MenuPage/MenuItem';
 import { menuItems } from '../../data/menuItems';
 import { useState, useMemo } from 'react';
 

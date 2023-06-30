@@ -1,4 +1,4 @@
-import images from '../data/images';
+import images from '../../data/images';
 const AboutUs = () => {
   return (
     <section className="flex flex-col items-center lg:flex-row lg:justify-around lg:items-start py-16 ">

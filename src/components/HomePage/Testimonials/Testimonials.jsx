@@ -1,5 +1,5 @@
 import TestimonialsSlider from './TestimonialsSlider';
-import images from '../../data/images';
+import images from '../../../data/images';
 
 const Testimonials = () => {
   return (
