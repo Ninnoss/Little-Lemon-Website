@@ -15,7 +15,9 @@ const MenuItem = ({ img, name }) => {
   return (
     <div className="relative hover:cursor-pointer group">
       {isLoading ? (
-        <div className="h-36 sm:h-52 w-72 md:w-96 bg-gray-200 animate-pulse rounded-2xl" />
+        <div className="h-36 sm:h-52 w-72 md:w-96 bg-gray-200 animate-pulse rounded-2xl">
+          <div className="bg-gradient-to-r from-gray-200/50  to-gray-300 animate-pulse h-full rounded-2xl" />
+        </div>
       ) : (
         <figure>
           <img
