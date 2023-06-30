@@ -1,20 +1,3 @@
-import pasta from '../assets/Imgs/Menu-Page/Food/Pasta.webp';
-import pizza from '../assets/Imgs/Menu-Page/Food/Pizza.webp';
-import sandwiches from '../assets/Imgs/Menu-Page/Food/Sandwiches.webp';
-import burgers from '../assets/Imgs/Menu-Page/Food/Burgers.webp';
-import meals from '../assets/Imgs/Menu-Page/Food/Meals.webp';
-import seaFood from '../assets/Imgs/Menu-Page/Food/Sea-Food.webp';
-import antiPasti from '../assets/Imgs/Menu-Page/Food/Antipasti.webp';
-import risotto from '../assets/Imgs/Menu-Page/Food/Risotto.webp';
-import vegan from '../assets/Imgs/Menu-Page/Food/Vegan.webp';
-
-import appetizer from '../assets/Imgs/Menu-Page/Appetizers/Appetizers.webp';
-import salad from '../assets/Imgs/Menu-Page/Appetizers/Salad.webp';
-import soup from '../assets/Imgs/Menu-Page/Appetizers/Soup.webp';
-import focaccia from '../assets/Imgs/Menu-Page/Appetizers/Focaccia.webp';
-import hummus from '../assets/Imgs/Menu-Page/Appetizers/Hummus.webp';
-import frenchFries from '../assets/Imgs/Menu-Page/Appetizers/French-Fries.webp';
-
 export const menuItems = [
   {
     id: 1,
@@ -107,4 +90,110 @@ export const menuItems = [
     name: 'French Fries',
     category: 'Appetizers',
   },
+  // Drinks
+  {
+    id: 16,
+    image: mojito,
+    name: 'Mojito',
+    category: 'Drinks',
+  },
+  {
+    id: 17,
+    image: margarita,
+    name: 'Margarita',
+    category: 'Drinks',
+  },
+  {
+    id: 18,
+    image: wine,
+    name: 'Wine',
+    category: 'Drinks',
+  },
+  {
+    id: 19,
+    image: martini,
+    name: 'Martini',
+    category: 'Drinks',
+  },
+  {
+    id: 20,
+    image: cosmopolitan,
+    name: 'Cosmopolitan',
+    category: 'Drinks',
+  },
+  {
+    id: 21,
+    image: bloodMary,
+    name: 'Blood Mary',
+    category: 'Drinks',
+  },
+  // Desserts
+  {
+    id: 22,
+    image: chocolateCake,
+    name: 'Chocolate Cake',
+    category: 'Desserts',
+  },
+  {
+    id: 23,
+    image: cheeseCake,
+    name: 'Cheese Cake',
+    category: 'Desserts',
+  },
+  {
+    id: 24,
+    image: applePie,
+    name: 'Apple Pie',
+    category: 'Desserts',
+  },
+  {
+    id: 25,
+    image: tiramisu,
+    name: 'Tiramisu',
+    category: 'Desserts',
+  },
+  {
+    id: 26,
+    image: cremeBrule,
+    name: 'Crème Brûlée',
+    category: 'Desserts',
+  },
+  {
+    id: 27,
+    image: iceCream,
+    name: 'Ice Cream Sundae',
+    category: 'Desserts',
+  },
 ];
+
+// Food
+import pasta from '../assets/Imgs/Menu-Page/Food/Pasta.webp';
+import pizza from '../assets/Imgs/Menu-Page/Food/Pizza.webp';
+import sandwiches from '../assets/Imgs/Menu-Page/Food/Sandwiches.webp';
+import burgers from '../assets/Imgs/Menu-Page/Food/Burgers.webp';
+import meals from '../assets/Imgs/Menu-Page/Food/Meals.webp';
+import seaFood from '../assets/Imgs/Menu-Page/Food/Sea-Food.webp';
+import antiPasti from '../assets/Imgs/Menu-Page/Food/Antipasti.webp';
+import risotto from '../assets/Imgs/Menu-Page/Food/Risotto.webp';
+import vegan from '../assets/Imgs/Menu-Page/Food/Vegan.webp';
+// Appetizers
+import appetizer from '../assets/Imgs/Menu-Page/Appetizers/Appetizers.webp';
+import salad from '../assets/Imgs/Menu-Page/Appetizers/Salad.webp';
+import soup from '../assets/Imgs/Menu-Page/Appetizers/Soup.webp';
+import focaccia from '../assets/Imgs/Menu-Page/Appetizers/Focaccia.webp';
+import hummus from '../assets/Imgs/Menu-Page/Appetizers/Hummus.webp';
+import frenchFries from '../assets/Imgs/Menu-Page/Appetizers/French-Fries.webp';
+// Drinks
+import mojito from '../assets/Imgs/Menu-Page/Drinks/Mojito.webp';
+import margarita from '../assets/Imgs/Menu-Page/Drinks/Margarita.webp';
+import wine from '../assets/Imgs/Menu-Page/Drinks/Wine.webp';
+import martini from '../assets/Imgs/Menu-Page/Drinks/Maritini.webp';
+import cosmopolitan from '../assets/Imgs/Menu-Page/Drinks/Cosmopolitan.webp';
+import bloodMary from '../assets/Imgs/Menu-Page/Drinks/Bloody-Mary.webp';
+// Desserts
+import chocolateCake from '../assets/Imgs/Menu-Page/Desserts/Chocolate-Cake.webp';
+import cheeseCake from '../assets/Imgs/Menu-Page/Desserts/Cheesecake.webp';
+import applePie from '../assets/Imgs/Menu-Page/Desserts/Apple-Pie.webp';
+import tiramisu from '../assets/Imgs/Menu-Page/Desserts/Tiramisu.webp';
+import cremeBrule from '../assets/Imgs/Menu-Page/Desserts/Crème Brûlée.webp';
+import iceCream from '../assets/Imgs/Menu-Page/Desserts/Ice Cream Sundae.webp';
