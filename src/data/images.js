@@ -15,6 +15,7 @@ import pizza from '../assets/Imgs/pizza.png';
 import nat from '../assets/Imgs/Pizza-flying-stuff-nat.png';
 
 import menuBg from '../assets/Imgs/Menu-Page/Restaurant atmosphere.webp';
+import greenLemonBg from '../assets/Imgs/Menu-Page/Green-lemon-bg.webp';
 
 export default {
   greekSalad,
@@ -33,4 +34,5 @@ export default {
   pizza,
   nat,
   menuBg,
+  greenLemonBg,
 };
