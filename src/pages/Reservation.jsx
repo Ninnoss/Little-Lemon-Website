@@ -1,6 +1,9 @@
 import RadioButtons from '../components/ReservationPage/RadioButtons';
 import DateComponent from '../components/ReservationPage/DateComponent';
 import TimePicker from '../components/ReservationPage/TimePicker';
+import OccasionPicker from '../components/ReservationPage/OccasionPicker';
+import DinersPicker from '../components/ReservationPage/DinersPicker';
+import UserInfo from '../components/ReservationPage/UserInfo';
 
 const TableReservation = () => {
   return (
@@ -11,20 +14,23 @@ const TableReservation = () => {
       <h1 className="text-primaryYellow font-markazi  text-6xl ">Reservations</h1>
       <div>
         <form className="pt-16">
-          <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between ">
+          <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between">
             <RadioButtons />
           </fieldset>
 
-          <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between ">
+          <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between">
             <DateComponent />
             <TimePicker />
           </fieldset>
 
-          {/* <fieldset>
-            <label>
-              <input />
-            </label>
-          </fieldset> */}
+          <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between">
+            <OccasionPicker />
+            <DinersPicker />
+          </fieldset>
+
+          <fieldset>
+            <UserInfo />
+          </fieldset>
         </form>
       </div>
     </section>

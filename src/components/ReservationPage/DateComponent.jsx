@@ -31,7 +31,6 @@ const DateComponent = () => {
     };
   }, []);
 
-
   const handleChange = (selectedDate) => {
     setSelectedDate(selectedDate);
     setValidationMessage(false); // Hide the validation message when a date is selected
@@ -91,7 +90,7 @@ const DateComponent = () => {
         show={show}
         setShow={handleClose}>
         <div
-          className="flex items-center space-x-8 bg-white px-4 py-2 rounded-lg focus:outline-none focus:ring focus:ring-primaryGreen"
+          className="w-[250px] flex items-center justify-between bg-white px-4 py-2 rounded-lg cursor-pointer"
           onClick={handleClick}>
           <BsFillCalendarMinusFill
             size={28}

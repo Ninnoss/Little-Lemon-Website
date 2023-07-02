@@ -10,7 +10,7 @@ const TimePicker = () => {
   const [validationMessage, setValidationMessage] = useState(false);
   const timePickerRef = useRef(null);
 
-  // closing the TimePicker when clicking outside it
+  // Closing the TimePicker when clicking outside it
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (timePickerRef.current && !timePickerRef.current.contains(event.target)) {
@@ -43,7 +43,7 @@ const TimePicker = () => {
     <div
       ref={timePickerRef}
       onClick={handleClick}
-      className={`relative mt-10 sm:mt-0 ${selectedTime ? 'mr-7' : null}`}>
+      className={`relative mt-10 sm:mt-0`}>
       <legend className="font-karla block text-white font-semibold text-2xl py-4">Time</legend>
       <label
         htmlFor="timePicker"
@@ -52,13 +52,13 @@ const TimePicker = () => {
       </label>
       <div
         id="time"
-        className="flex items-center justify-between cursor-pointer bg-white px-4 py-2 rounded-lg"
+        className="w-[250px] flex items-center justify-between bg-white px-4 py-2 rounded-lg cursor-pointer"
         onClick={toggleOptions}>
         <LuAlarmClock
-          size={'2rem'}
+          size={28}
           className="text-primaryGreen"
         />
-        <span className="text-primaryGreen text-xl font-karla mx-4">{selectedTime ? selectedTime + ':00 PM' : 'Select Time'}</span>
+        <span className="text-primaryGreen text-xl font-karla">{selectedTime ? selectedTime + ':00 PM' : 'Select Time'}</span>
         <FaAngleDown
           size={24}
           className="text-primaryGreen"
@@ -78,11 +78,11 @@ const TimePicker = () => {
       {validationMessage && <p className="text-red-500 mt-2">Please select a time.</p>}
 
       {showOptions && (
-        <div className="absolute top-[8.5rem] left-0 bg-white text-primaryGreen  p-2 rounded-lg w-full grid grid-cols-2">
+        <div className="absolute top-[8.5rem] left-0 bg-white text-primaryGreen p-2 rounded-lg w-full grid grid-cols-2 z-10">
           {timeOptions.map((time) => (
             <div
               key={time}
-              className="p-2 cursor-pointer  font-semibold hover:bg-primaryGreen/80 hover:rounded-md duration-200 text-center hover:text-white border border-dashed hover:border-solid"
+              className="p-2.5 z-10 cursor-pointer font-semibold hover:bg-primaryGreen/80 hover:rounded-md duration-200 text-center hover:text-white border border-dashed hover:border-solid"
               onClick={() => handleSelect(time)}>
               {time}:00 PM
             </div>

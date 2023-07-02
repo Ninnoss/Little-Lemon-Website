@@ -17,7 +17,7 @@ const RadioButtons = () => {
 
       <label
         htmlFor="outdoor-seating"
-        className="font-karla text-white font-semibold text-2xl flex items-center py-4 ">
+        className="font-karla text-white font-semibold text-2xl flex items-center py-4 sm:mr-8">
         Outdoor Seating
         <input
           name="seating"
