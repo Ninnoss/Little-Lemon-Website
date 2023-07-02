@@ -49,3 +49,12 @@
 input[type='radio']:checked ~ .radio:after {
   transform: translate(-50%, -50%) scale(1);
 }
+
+/* Form required start * */
+.required::before {
+    content: '*';
+    margin-right: 0.5rem;
+    justify-self: center; 
+    size: 2rem;
+
+}

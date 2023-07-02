@@ -82,7 +82,7 @@ const OccasionPicker = () => {
           {occasionOptions.map((occasion) => (
             <div
               key={occasion}
-              className="p-2 cursor-pointer font-semibold hover:bg-primaryGreen/80 hover:rounded-md duration-200 text-center hover:text-white border border-dashed hover:border-solid"
+              className="p-3 cursor-pointer font-semibold hover:bg-primaryGreen/80 hover:rounded-md duration-200 text-center hover:text-white border border-dashed hover:border-solid"
               onClick={() => handleSelect(occasion)}>
               {occasion}
             </div>

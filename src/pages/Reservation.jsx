@@ -8,7 +8,7 @@ import UserInfo from '../components/ReservationPage/UserInfo';
 const TableReservation = () => {
   return (
     <section
-      className="h-[70rem] px-10 md:px-32 lg:px-52 xl:px-80   py-10 bg-primaryGreen bg-contain  bg-center"
+      className="h-[170rem] px-10 md:px-32 lg:px-52 xl:px-80   py-10 bg-primaryGreen bg-contain  bg-center"
       // style={{ backgroundImage: `url(${images.greenLemonBg})` }}
     >
       <h1 className="text-primaryYellow font-markazi  text-6xl ">Reservations</h1>
@@ -28,7 +28,8 @@ const TableReservation = () => {
             <DinersPicker />
           </fieldset>
 
-          <fieldset>
+          <fieldset
+            className="pt-12">
             <UserInfo />
           </fieldset>
         </form>
