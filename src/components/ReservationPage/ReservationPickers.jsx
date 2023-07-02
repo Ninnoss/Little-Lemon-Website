@@ -8,14 +8,14 @@ import DinersPicker from '../ReservationPage/DataPickers/DinersPicker';
 const ReservationPickers = ({ selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, onReservationDataChange }) => {
   return (
     <>
-      <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between">
+      <fieldset className="flex flex-col items-center  sm:flex-row sm:justify-between">
         <RadioButtons
           selectedSeating={selectedSeating}
           onSeatingChange={(value) => onReservationDataChange('selectedSeating', value)}
         />
       </fieldset>
 
-      <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between">
+      <fieldset className="flex flex-col items-center  sm:flex-row sm:justify-between">
         <DateComponent
           selectedDate={selectedDate}
           setSelectedDate={(value) => onReservationDataChange('selectedDate', value)}
@@ -26,7 +26,7 @@ const ReservationPickers = ({ selectedSeating, selectedDate, selectedTime, selec
         />
       </fieldset>
 
-      <fieldset className="flex flex-col items-start sm:flex-row sm:justify-between">
+      <fieldset className="flex flex-col items-center  sm:flex-row sm:justify-between">
         <OccasionPicker
           selectedOccasion={selectedOccasion}
           setSelectedOccasion={(value) => onReservationDataChange('selectedOccasion', value)}

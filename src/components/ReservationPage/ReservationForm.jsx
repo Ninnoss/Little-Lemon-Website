@@ -17,8 +17,10 @@ const ReservationForm = () => {
     email: '',
     phoneNumber: '',
     specialRequests: '',
+    policyAgreement: false,
   });
-  const { selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, firstName, lastName, email, phoneNumber } = reservationData;
+  const { selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, firstName, lastName, email, phoneNumber, policyAgreement } =
+    reservationData;
 
   const [pickersCompleted, setPickersCompleted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -48,6 +50,7 @@ const ReservationForm = () => {
       email: '',
       phoneNumber: '',
       specialRequests: '',
+      policyAgreement: false,
     });
 
     // Show the loading spinner
@@ -74,12 +77,22 @@ const ReservationForm = () => {
 
   const showUserInfo = pickersCompleted && (
     <fieldset className="pt-12">
-      <UserInfo onUserInfoChange={handleReservationDataChange} />
+      <UserInfo
+        data={{
+          selectedSeating,
+          selectedDate,
+          selectedTime,
+          selectedOccasion,
+          selectedDiners,
+          policyAgreement,
+        }}
+        onUserInfoChange={handleReservationDataChange}
+      />
     </fieldset>
   );
 
   // Calculate the disabled state based on form completeness
-  const disabled = !pickersCompleted || !firstName || !lastName || !email || !phoneNumber;
+  const disabled = !pickersCompleted || !firstName || !lastName || !email || !phoneNumber || !policyAgreement;
 
   return (
     <form

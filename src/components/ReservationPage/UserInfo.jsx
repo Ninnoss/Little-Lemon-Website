@@ -1,5 +1,7 @@
-// eslint-disable-next-line react/prop-types
-const UserInfo = ({ onUserInfoChange }) => {
+/* eslint-disable react/prop-types */
+import PickersSummary from './PickersSummary';
+const UserInfo = ({ onUserInfoChange, data }) => {
+
   const handleUserInfoChange = (fieldName, event) => {
     const { value } = event.target;
     onUserInfoChange(fieldName, value);
@@ -7,7 +9,7 @@ const UserInfo = ({ onUserInfoChange }) => {
 
   return (
     <>
-      <div className="flex flex-col items-start sm:flex-row sm:justify-between">
+      <div className="flex flex-col items-center  sm:flex-row sm:justify-between">
         <label
           htmlFor="firstName"
           className="relative">
@@ -43,7 +45,7 @@ const UserInfo = ({ onUserInfoChange }) => {
         </label>
       </div>
 
-      <div className="flex flex-col items-start sm:flex-row sm:justify-between">
+      <div className="flex flex-col items-center  sm:flex-row sm:justify-between">
         <label
           htmlFor="email"
           className="relative">
@@ -79,7 +81,7 @@ const UserInfo = ({ onUserInfoChange }) => {
         </label>
       </div>
 
-      <div className="flex flex-col items-start sm:flex-row sm:justify-between">
+      <div className="flex flex-col items-center  sm:flex-row sm:justify-between">
         <label
           htmlFor="specialRequests"
           className="relative">
@@ -91,6 +93,8 @@ const UserInfo = ({ onUserInfoChange }) => {
             placeholder="Enter any special requests"
             onChange={(event) => handleUserInfoChange('specialRequests', event)}></textarea>
         </label>
+
+        <PickersSummary data={data} onUserInfoChange={onUserInfoChange} />
       </div>
     </>
   );
