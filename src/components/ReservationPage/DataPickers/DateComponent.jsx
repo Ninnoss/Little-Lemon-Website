@@ -1,35 +1,27 @@
 import { BsFillCalendarMinusFill } from 'react-icons/bs';
 import { FaAngleDown } from 'react-icons/fa';
 import Datepicker from 'tailwind-datepicker-react';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
+import useOutsideClick from '../../../hooks/useOutsideClick';
 
-const DateComponent = () => {
+
+// eslint-disable-next-line react/prop-types
+const DateComponent = ({ selectedDate, setSelectedDate }) => {
+
   // Tailwind Datepicker 3rd party state
   const [show, setShow] = useState(false);
 
-  const [selectedDate, setSelectedDate] = useState('');
+  // const [selectedDate, setSelectedDate] = useState('');
   const [validationMessage, setValidationMessage] = useState(false);
   const datepickerRef = useRef(null);
+
+  // closing the DatePicker when clicking outside it
+  useOutsideClick(datepickerRef, setShow);
 
   // Tailwind Datepicker 3rd party handle close when selecting a date
   const handleClose = (state) => {
     setShow(state);
   };
-
-  // closing the DatePicker when clicking outside it
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (datepickerRef.current && !datepickerRef.current.contains(event.target)) {
-        setShow(false);
-      }
-    };
-
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
 
   const handleChange = (selectedDate) => {
     setSelectedDate(selectedDate);

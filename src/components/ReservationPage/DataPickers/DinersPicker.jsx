@@ -1,29 +1,20 @@
 import { FaAngleDown } from 'react-icons/fa';
 import { HiUserGroup } from 'react-icons/hi';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
+import useOutsideClick from '../../../hooks/useOutsideClick';
 
-const DinersPicker = () => {
+
+// eslint-disable-next-line react/prop-types
+const DinersPicker = ({ selectedDiners, setSelectedDiners }) => {
+  
   const dinerOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  const [selectedDiners, setSelectedDiners] = useState('');
   const [showOptions, setShowOptions] = useState(false);
   const [requiredMessage, setRequiredMessage] = useState(false);
   const dinersPickerRef = useRef(null);
 
   // Closing the DinersPicker when clicking outside it
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (dinersPickerRef.current && !dinersPickerRef.current.contains(event.target)) {
-        setShowOptions(false);
-      }
-    };
-
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
+  useOutsideClick(dinersPickerRef, setShowOptions);
 
   const handleSelect = (diners) => {
     setSelectedDiners(diners);

@@ -1,29 +1,19 @@
 import { LuAlarmClock } from 'react-icons/lu';
 import { FaAngleDown } from 'react-icons/fa';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
+import useOutsideClick from '../../../hooks/useOutsideClick';
 
-const TimePicker = () => {
+
+// eslint-disable-next-line react/prop-types
+const TimePicker = ({ selectedTime, setSelectedTime }) => {
   const timeOptions = [5, 6, 7, 8, 9, 10];
 
-  const [selectedTime, setSelectedTime] = useState('');
   const [showOptions, setShowOptions] = useState(false);
   const [validationMessage, setValidationMessage] = useState(false);
   const timePickerRef = useRef(null);
 
   // Closing the TimePicker when clicking outside it
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (timePickerRef.current && !timePickerRef.current.contains(event.target)) {
-        setShowOptions(false);
-      }
-    };
-
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
+  useOutsideClick(timePickerRef, setShowOptions);
 
   const handleSelect = (time) => {
     setSelectedTime(time);

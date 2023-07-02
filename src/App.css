@@ -54,7 +54,5 @@ input[type='radio']:checked ~ .radio:after {
 .required::before {
     content: '*';
     margin-right: 0.5rem;
-    justify-self: center; 
     size: 2rem;
-
 }

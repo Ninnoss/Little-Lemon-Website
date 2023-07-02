@@ -1,4 +1,10 @@
-const RadioButtons = () => {
+// eslint-disable-next-line react/prop-types
+const RadioButtons = ({ selectedSeating, onSeatingChange }) => {
+  
+  const handleSeatingChange = (value) => {
+    onSeatingChange(value);
+  };
+
   return (
     <>
       <label
@@ -11,6 +17,8 @@ const RadioButtons = () => {
           id="indoor-seating"
           value="indoor"
           className="sr-only"
+          checked={selectedSeating === 'indoor'}
+          onChange={() => handleSeatingChange('indoor')}
         />
         <span className="radio h-6 w-6 block rounded-full border-2 border-solid border-highlightGrey ml-8 md:ml-4 relative"></span>
       </label>
@@ -25,6 +33,8 @@ const RadioButtons = () => {
           id="outdoor-seating"
           value="outdoor"
           className="sr-only"
+          checked={selectedSeating === 'outdoor'}
+          onChange={() => handleSeatingChange('outdoor')}
         />
         <span className="radio h-6 w-6 block rounded-full border-2 border-solid border-highlightGrey ml-4 relative"></span>
       </label>

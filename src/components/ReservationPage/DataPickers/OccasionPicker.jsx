@@ -1,29 +1,18 @@
 import { FaAngleDown } from 'react-icons/fa';
 import { LiaGlassCheersSolid } from 'react-icons/lia';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
+import useOutsideClick from '../../../hooks/useOutsideClick';
 
-const OccasionPicker = () => {
+// eslint-disable-next-line react/prop-types
+const OccasionPicker = ({ selectedOccasion, setSelectedOccasion }) => {
   const occasionOptions = ['Birthday', 'Anniversary', 'Engagement'];
 
-  const [selectedOccasion, setSelectedOccasion] = useState('');
   const [showOptions, setShowOptions] = useState(false);
   const [requiredMessage, setRequiredMessage] = useState(false);
   const occasionPickerRef = useRef(null);
 
   // Closing the OccasionPicker when clicking outside it
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (occasionPickerRef.current && !occasionPickerRef.current.contains(event.target)) {
-        setShowOptions(false);
-      }
-    };
-
-    document.addEventListener('click', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
+  useOutsideClick(occasionPickerRef, setShowOptions);
 
   const handleSelect = (occasion) => {
     setSelectedOccasion(occasion);
