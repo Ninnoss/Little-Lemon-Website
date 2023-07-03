@@ -1,11 +1,11 @@
-import RadioButtons from '../ReservationPage/DataPickers/RadioButtons';
-import DateComponent from '../ReservationPage/DataPickers/DateComponent';
-import TimePicker from '../ReservationPage/DataPickers/TimePicker';
-import OccasionPicker from '../ReservationPage/DataPickers/OccasionPicker';
-import DinersPicker from '../ReservationPage/DataPickers/DinersPicker';
+/* eslint-disable react/prop-types */
+import RadioButtons from './DataPickers/RadioButtons';
+import DateComponent from './DataPickers/DateComponent';
+import TimePicker from './DataPickers/TimePicker';
+import OccasionPicker from './DataPickers/OccasionPicker';
+import DinersPicker from './DataPickers/DinersPicker';
 
-// eslint-disable-next-line react/prop-types
-const ReservationPickers = ({ selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, onReservationDataChange }) => {
+const ReservationDataPickers = ({ selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, onReservationDataChange }) => {
   return (
     <>
       <fieldset className="flex flex-col items-center  sm:flex-row sm:justify-between">
@@ -40,4 +40,4 @@ const ReservationPickers = ({ selectedSeating, selectedDate, selectedTime, selec
   );
 };
 
-export default ReservationPickers;
+export default ReservationDataPickers;

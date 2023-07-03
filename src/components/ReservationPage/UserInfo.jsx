@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import PickersSummary from './PickersSummary';
-const UserInfo = ({ onUserInfoChange, data }) => {
+import DataPickersSummary from './DataPickers/DataPickersSummary';
 
+const UserInfo = ({ onUserInfoChange, data }) => {
   const handleUserInfoChange = (fieldName, event) => {
     const { value } = event.target;
     onUserInfoChange(fieldName, value);
@@ -24,6 +24,8 @@ const UserInfo = ({ onUserInfoChange, data }) => {
             placeholder="First Name"
             required
             onChange={(event) => handleUserInfoChange('firstName', event)}
+            aria-label="First Name"
+            aria-required="true"
           />
         </label>
 
@@ -41,6 +43,8 @@ const UserInfo = ({ onUserInfoChange, data }) => {
             placeholder="Last Name"
             required
             onChange={(event) => handleUserInfoChange('lastName', event)}
+            aria-label="Last Name"
+            aria-required="true"
           />
         </label>
       </div>
@@ -60,6 +64,8 @@ const UserInfo = ({ onUserInfoChange, data }) => {
             placeholder="Email"
             required
             onChange={(event) => handleUserInfoChange('email', event)}
+            aria-label="Email"
+            aria-required="true"
           />
         </label>
 
@@ -77,6 +83,8 @@ const UserInfo = ({ onUserInfoChange, data }) => {
             placeholder="Phone Number"
             required
             onChange={(event) => handleUserInfoChange('phoneNumber', event)}
+            aria-label="Phone Number"
+            aria-required="true"
           />
         </label>
       </div>
@@ -91,10 +99,14 @@ const UserInfo = ({ onUserInfoChange, data }) => {
             id="specialRequests"
             name="specialRequests"
             placeholder="Enter any special requests"
-            onChange={(event) => handleUserInfoChange('specialRequests', event)}></textarea>
+            onChange={(event) => handleUserInfoChange('specialRequests', event)}
+            aria-label="Special Requests"></textarea>
         </label>
 
-        <PickersSummary data={data} onUserInfoChange={onUserInfoChange} />
+        <DataPickersSummary
+          data={data}
+          onUserInfoChange={onUserInfoChange}
+        />
       </div>
     </>
   );

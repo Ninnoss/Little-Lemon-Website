@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
-import ReservationPickers from './ReservationPickers';
-import UserInfo from './UserInfo';
-import ConfirmationMessage from './ConfirmationMessage';
-import LoadingSpinner from './LoadingSpinner';
+import { useState } from 'react';
+import ReservationDataPickers from './ReservationDataPickers';
+import UserInfoWrapper from './UserInfoWrapper';
+import LoadingAndConfirmation from './LoadingAndConfirmationMsgs/LoadingAndConfirmation';
 import Button from '../Button';
+import { formatDate } from '../../utils/formatDate';
 
 const ReservationForm = () => {
+  // Form controlled Inputs state object (plus loading and confirmation msg states)
   const [reservationData, setReservationData] = useState({
     selectedSeating: '',
     selectedDate: '',
@@ -18,15 +19,17 @@ const ReservationForm = () => {
     phoneNumber: '',
     specialRequests: '',
     policyAgreement: false,
+    loading: false,
+    showConfirmationMsg: false,
   });
+
   const { selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, firstName, lastName, email, phoneNumber, policyAgreement } =
     reservationData;
 
-  const [pickersCompleted, setPickersCompleted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [showConfirmationMsg, setShowConfirmationMsg] = useState(false);
-
   const handleReservationDataChange = (fieldName, value) => {
+    if (fieldName === 'selectedDate') {
+      value = formatDate(value); // Format the date before setting it
+    }
     setReservationData((prevState) => ({
       ...prevState,
       [fieldName]: value,
@@ -35,70 +38,40 @@ const ReservationForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Reservation Data:', reservationData);
-    // Perform any additional actions or validations here
 
-    // Reset the form fields
-    setReservationData({
-      selectedSeating: '',
-      selectedDate: '',
-      selectedTime: '',
-      selectedOccasion: '',
-      selectedDiners: '',
-      firstName: '',
-      lastName: '',
-      email: '',
-      phoneNumber: '',
-      specialRequests: '',
-      policyAgreement: false,
-    });
+    console.log('Reservation Data:', reservationData);
 
     // Show the loading spinner
-    setLoading(true);
+    setReservationData((prevState) => ({
+      ...prevState,
+      loading: true,
+    }));
 
     // Show confirmation message
-    setShowConfirmationMsg(true);
-
-    // Hide the loading spinner after 3 seconds and hide the confirmation message after 5 seconds
-    setTimeout(() => {
-      setLoading(false);
-      // Hide the confirmation message after 5 seconds
-      setTimeout(() => {
-        setShowConfirmationMsg(false);
-      }, 5000);
-    }, 3000);
+    setReservationData((prevState) => ({
+      ...prevState,
+      showConfirmationMsg: true,
+    }));
   };
 
-  // Check if all the pickers are completed to show the user info inputs below them
-  useEffect(() => {
-    const allPickersCompleted = selectedSeating !== '' && selectedDate !== '' && selectedTime !== '' && selectedOccasion !== '' && selectedDiners !== '';
-    setPickersCompleted(allPickersCompleted);
-  }, [selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners]);
-
-  const showUserInfo = pickersCompleted && (
-    <fieldset className="pt-12">
-      <UserInfo
-        data={{
-          selectedSeating,
-          selectedDate,
-          selectedTime,
-          selectedOccasion,
-          selectedDiners,
-          policyAgreement,
-        }}
-        onUserInfoChange={handleReservationDataChange}
-      />
-    </fieldset>
-  );
-
-  // Calculate the disabled state based on form completeness
-  const disabled = !pickersCompleted || !firstName || !lastName || !email || !phoneNumber || !policyAgreement;
+  // check for disabling the submit button if all inputs aren't filled
+  const disabled =
+    !selectedSeating ||
+    !selectedDate ||
+    !selectedTime ||
+    !selectedOccasion ||
+    !selectedDiners ||
+    !firstName ||
+    !lastName ||
+    !email ||
+    !phoneNumber ||
+    !policyAgreement;
 
   return (
     <form
       className="pt-16"
       onSubmit={handleSubmit}>
-      <ReservationPickers
+      <ReservationDataPickers
         selectedSeating={selectedSeating}
         selectedDate={selectedDate}
         selectedTime={selectedTime}
@@ -107,7 +80,15 @@ const ReservationForm = () => {
         onReservationDataChange={handleReservationDataChange}
       />
 
-      {showUserInfo}
+      <UserInfoWrapper
+        selectedSeating={selectedSeating}
+        selectedDate={selectedDate}
+        selectedTime={selectedTime}
+        selectedOccasion={selectedOccasion}
+        selectedDiners={selectedDiners}
+        policyAgreement={policyAgreement}
+        handleReservationDataChange={handleReservationDataChange}
+      />
 
       <div className="pt-44">
         <Button
@@ -116,14 +97,13 @@ const ReservationForm = () => {
           disabled={disabled} // Disable the button if the form is incomplete
           processing={disabled} // Reduce the button opacity if the form is incomplete
         >
-          {pickersCompleted ? 'Confirm Reservation' : 'Reserve Table'}
+          {selectedSeating && selectedDate && selectedTime && selectedOccasion && selectedDiners ? 'Confirm Reservation' : 'Reserve Table'}
         </Button>
       </div>
 
-      <LoadingSpinner loading={loading} />
-      <ConfirmationMessage
-        loading={loading}
-        showConfirmationMsg={showConfirmationMsg}
+      <LoadingAndConfirmation
+        reservationData={reservationData}
+        setReservationData={setReservationData}
       />
     </form>
   );

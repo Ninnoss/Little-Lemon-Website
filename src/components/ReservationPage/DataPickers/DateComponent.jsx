@@ -4,10 +4,8 @@ import Datepicker from 'tailwind-datepicker-react';
 import { useState, useRef } from 'react';
 import useOutsideClick from '../../../hooks/useOutsideClick';
 
-
 // eslint-disable-next-line react/prop-types
 const DateComponent = ({ selectedDate, setSelectedDate }) => {
-
   // Tailwind Datepicker 3rd party state
   const [show, setShow] = useState(false);
 
@@ -31,11 +29,6 @@ const DateComponent = ({ selectedDate, setSelectedDate }) => {
   const handleClick = () => {
     setShow((prevShow) => !prevShow);
     setValidationMessage(true);
-  };
-
-  const formatDate = (date) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
   };
 
   const today = new Date();
@@ -88,7 +81,7 @@ const DateComponent = ({ selectedDate, setSelectedDate }) => {
             size={28}
             className="text-primaryGreen/90"
           />
-          <span className="text-primaryGreen text-xl font-karla">{selectedDate ? formatDate(selectedDate) : 'Select Date'}</span>
+          <span className="text-primaryGreen text-xl font-karla">{selectedDate ? selectedDate : 'Select Date'}</span>
           <FaAngleDown
             size={24}
             className="text-primaryGreen"
