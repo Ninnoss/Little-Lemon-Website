@@ -21,7 +21,7 @@ const DataPickersSummary = ({ data, onUserInfoChange }) => {
           <HiUserGroup size={25} /> {selectedDiners + ' Diners'}
         </li>
         <li className="text-white text-xl flex gap-x-4 items-center ">
-          <LuAlarmClock size={25} /> {`${selectedTime}:00 PM`}
+          <LuAlarmClock size={25} /> {`${selectedTime}`}
         </li>
         <li className="text-white text-xl flex gap-x-4 items-center">
           <LiaGlassCheersSolid size={25} /> {selectedOccasion}
@@ -45,7 +45,10 @@ const DataPickersSummary = ({ data, onUserInfoChange }) => {
           aria-labelledby="privacy-policy-label"
           aria-checked={policyAgreement}
         />
-        <span className="h-6 w-6 block rounded-full border-2 border-solid border-highlightGrey relative ">
+        <span
+          className={`h-6 w-6 block rounded-full border-2 border-solid  relative ${
+            !policyAgreement ? 'border-lightOrange border-[3px]' : 'border-highlightGrey'
+          }`}>
           <span
             className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-400 rounded-full h-2 w-2
              transition duration-300  ${policyAgreement ? 'scale-100 ' : 'scale-0'} `}></span>

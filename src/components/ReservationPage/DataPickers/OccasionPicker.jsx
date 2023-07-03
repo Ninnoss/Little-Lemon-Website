@@ -64,7 +64,7 @@ const OccasionPicker = ({ selectedOccasion, setSelectedOccasion }) => {
           required
         />
       </div>
-      {requiredMessage && <p className="text-red-500 mt-2">Please select an occasion.</p>}
+      {requiredMessage && <p className="absolute text-lightOrange mt-2">Please select an occasion.</p>}
 
       {showOptions && (
         <div className="absolute top-[8rem] left-0 bg-white text-primaryGreen p-2 rounded-lg w-full z-10 ">

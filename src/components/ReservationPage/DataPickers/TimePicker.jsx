@@ -1,16 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 import { LuAlarmClock } from 'react-icons/lu';
 import { FaAngleDown } from 'react-icons/fa';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import useOutsideClick from '../../../hooks/useOutsideClick';
+import { fetchAPI } from '../../../data/BookingAPI';
 
-
-// eslint-disable-next-line react/prop-types
-const TimePicker = ({ selectedTime, setSelectedTime }) => {
-  const timeOptions = [5, 6, 7, 8, 9, 10];
-
+const TimePicker = ({ selectedTime, setSelectedTime, selectedDate }) => {
   const [showOptions, setShowOptions] = useState(false);
   const [validationMessage, setValidationMessage] = useState(false);
   const timePickerRef = useRef(null);
+  const [timeOptions, setTimeOptions] = useState([]);
 
   // Closing the TimePicker when clicking outside it
   useOutsideClick(timePickerRef, setShowOptions);
@@ -29,11 +29,18 @@ const TimePicker = ({ selectedTime, setSelectedTime }) => {
 
   const toggleOptions = () => setShowOptions(!showOptions);
 
+  useEffect(() => {
+    const date = new Date(selectedDate); // Convert the selected date string to a Date object
+    const availableTimes = fetchAPI(date);
+    setTimeOptions(availableTimes);
+    setSelectedTime('');
+  }, [selectedDate]); // Set selectedTime to an empty string when selectedDate changes
+
   return (
     <div
       ref={timePickerRef}
       onClick={handleClick}
-      className={`relative mt-10 sm:mt-0`}>
+      className={`relative mt-10 sm:mt-0 `}>
       <legend className="font-karla block text-white font-semibold text-2xl py-4">Time</legend>
       <label
         htmlFor="timePicker"
@@ -48,7 +55,7 @@ const TimePicker = ({ selectedTime, setSelectedTime }) => {
           size={28}
           className="text-primaryGreen"
         />
-        <span className="text-primaryGreen text-xl font-karla">{selectedTime ? selectedTime + ':00 PM' : 'Select Time'}</span>
+        <span className="text-primaryGreen text-xl font-karla">{selectedTime ? selectedTime : 'Select Time'}</span>
         <FaAngleDown
           size={24}
           className="text-primaryGreen"
@@ -65,16 +72,23 @@ const TimePicker = ({ selectedTime, setSelectedTime }) => {
           required
         />
       </div>
-      {validationMessage && <p className="text-red-500 mt-2">Please select a time.</p>}
+      {validationMessage && (
+        <p className="text-lightOrange mt-4 absolute top-[6rem] left-0 ">
+          {selectedDate ? 'Please select a time.' : 'Please select a date to see the available times.'}
+        </p>
+      )}
 
-      {showOptions && (
-        <div className="absolute top-[8.5rem] left-0 bg-white text-primaryGreen p-2 rounded-lg w-full grid grid-cols-2 z-10">
+      {showOptions && selectedDate && timeOptions.length > 0 && (
+        <div
+          className={`absolute top-[8.5rem] left-0 bg-white text-primaryGreen p-2 rounded-lg w-full grid  ${
+            selectedDate ? 'grid-cols-2' : 'grid-cols-1'
+          } z-10`}>
           {timeOptions.map((time) => (
             <div
               key={time}
               className="p-2.5 z-10 cursor-pointer font-semibold hover:bg-primaryGreen/80 hover:rounded-md duration-200 text-center hover:text-white border border-dashed hover:border-solid"
               onClick={() => handleSelect(time)}>
-              {time}:00 PM
+              {time}
             </div>
           ))}
         </div>

@@ -1,10 +1,10 @@
+/* eslint-disable react/prop-types */
 import { BsFillCalendarMinusFill } from 'react-icons/bs';
 import { FaAngleDown } from 'react-icons/fa';
 import Datepicker from 'tailwind-datepicker-react';
 import { useState, useRef } from 'react';
 import useOutsideClick from '../../../hooks/useOutsideClick';
 
-// eslint-disable-next-line react/prop-types
 const DateComponent = ({ selectedDate, setSelectedDate }) => {
   // Tailwind Datepicker 3rd party state
   const [show, setShow] = useState(false);
@@ -56,14 +56,14 @@ const DateComponent = ({ selectedDate, setSelectedDate }) => {
       prev: () => <span>Previous</span>,
       next: () => <span>Next</span>,
     },
-    datepickerClassNames: 'top-[28rem] sm:top-[24rem] md:top-[24.5rem]  mt-10',
+    datepickerClassNames: 'top-[29rem] sm:top-[24rem] md:top-[26rem] mt-10 w-[250px]',
     defaultDate: today,
     language: 'en',
   };
 
   return (
     <div ref={datepickerRef}>
-      <legend className="font-karla text-white font-semibold text-2xl py-4">Date</legend>
+      <legend className="font-karla text-white font-semibold text-2xl py-4 ">Date</legend>
       <label
         htmlFor="datePicker"
         className="font-karla text-white text-xl sr-only">
@@ -99,7 +99,7 @@ const DateComponent = ({ selectedDate, setSelectedDate }) => {
           />
         </div>
       </Datepicker>
-      {validationMessage && <p className="text-red-500 mt-2">Please select a date.</p>}
+      {validationMessage && <p className="absolute text-lightOrange mt-2">Please select a date.</p>}
     </div>
   );
 };

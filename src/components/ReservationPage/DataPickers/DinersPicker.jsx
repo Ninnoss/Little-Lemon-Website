@@ -34,7 +34,7 @@ const DinersPicker = ({ selectedDiners, setSelectedDiners }) => {
     <div
       ref={dinersPickerRef}
       onClick={handleClick}
-      className={`relative mt-10 sm:mt-0 `}>
+      className={`relative mt-10 sm:mt-0  `}>
       <legend className="font-karla block text-white font-semibold text-2xl py-4">Diners</legend>
       <label
         htmlFor="dinersPicker"
@@ -66,7 +66,7 @@ const DinersPicker = ({ selectedDiners, setSelectedDiners }) => {
           required
         />
       </div>
-      {requiredMessage && <p className="text-red-500 mt-2">Please select the number of diners.</p>}
+      {requiredMessage && <p className="absolute text-lightOrange mt-2">Please select the number of diners.</p>}
 
       {showOptions && (
         <div className="absolute top-[8rem] left-0 bg-white text-primaryGreen p-2 rounded-lg w-full grid grid-cols-2 z-10">

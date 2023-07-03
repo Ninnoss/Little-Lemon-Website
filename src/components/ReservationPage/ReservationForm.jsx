@@ -2,8 +2,9 @@ import { useState } from 'react';
 import ReservationDataPickers from './ReservationDataPickers';
 import UserInfoWrapper from './UserInfoWrapper';
 import LoadingAndConfirmation from './LoadingAndConfirmationMsgs/LoadingAndConfirmation';
-import Button from '../Button';
+import SubmitButton from './SubmitButton';
 import { formatDate } from '../../utils/formatDate';
+import { submitAPI } from '../../data/BookingAPI';
 
 const ReservationForm = () => {
   // Form controlled Inputs state object (plus loading and confirmation msg states)
@@ -22,9 +23,6 @@ const ReservationForm = () => {
     loading: false,
     showConfirmationMsg: false,
   });
-
-  const { selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, firstName, lastName, email, phoneNumber, policyAgreement } =
-    reservationData;
 
   const handleReservationDataChange = (fieldName, value) => {
     if (fieldName === 'selectedDate') {
@@ -52,54 +50,25 @@ const ReservationForm = () => {
       ...prevState,
       showConfirmationMsg: true,
     }));
-  };
 
-  // check for disabling the submit button if all inputs aren't filled
-  const disabled =
-    !selectedSeating ||
-    !selectedDate ||
-    !selectedTime ||
-    !selectedOccasion ||
-    !selectedDiners ||
-    !firstName ||
-    !lastName ||
-    !email ||
-    !phoneNumber ||
-    !policyAgreement;
+    submitAPI(reservationData);
+  };
 
   return (
     <form
       className="pt-16"
       onSubmit={handleSubmit}>
       <ReservationDataPickers
-        selectedSeating={selectedSeating}
-        selectedDate={selectedDate}
-        selectedTime={selectedTime}
-        selectedOccasion={selectedOccasion}
-        selectedDiners={selectedDiners}
+        {...reservationData}
         onReservationDataChange={handleReservationDataChange}
       />
 
       <UserInfoWrapper
-        selectedSeating={selectedSeating}
-        selectedDate={selectedDate}
-        selectedTime={selectedTime}
-        selectedOccasion={selectedOccasion}
-        selectedDiners={selectedDiners}
-        policyAgreement={policyAgreement}
+        {...reservationData}
         handleReservationDataChange={handleReservationDataChange}
       />
 
-      <div className="pt-44">
-        <Button
-          className="hover:bg-lightOrange block mx-auto px-8 text-xl"
-          type="submit"
-          disabled={disabled} // Disable the button if the form is incomplete
-          processing={disabled} // Reduce the button opacity if the form is incomplete
-        >
-          {selectedSeating && selectedDate && selectedTime && selectedOccasion && selectedDiners ? 'Confirm Reservation' : 'Reserve Table'}
-        </Button>
-      </div>
+      <SubmitButton {...reservationData} />
 
       <LoadingAndConfirmation
         reservationData={reservationData}
