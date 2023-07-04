@@ -43,7 +43,7 @@ const Navbar = () => {
             <NavLink to="/reservation">Reservation</NavLink>
           </li>
           <li className="hover:text-lightOrange">
-            <NavLink to="/orderonline">Order Online</NavLink>
+            <NavLink to="/menu">Order Online</NavLink>
           </li>
           <li className="hover:text-lightOrange">
             <NavLink to="/login">Log In</NavLink>

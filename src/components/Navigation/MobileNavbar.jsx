@@ -10,7 +10,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
       className="fixed top-0 left-0 w-full h-full bg-highlightGrey flex justify-center items-center slide-bottom z-10  ">
       <MdOutlineRestaurantMenu
         size={'2.5rem'}
-        className="fixed top-5 right-5 text-lightOrange"
+        className="fixed top-5 right-5 text-primaryGreen hover:text-lightOrange"
         onClick={() => setToggleMenu(false)}
         aria-label="Close Menu"
       />
@@ -47,7 +47,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
         </li>
         <li className="hover:text-lightOrange">
           <NavLink
-            to={'/orderonline'}
+            to="/menu"
             role="menuitem">
             Order Online
           </NavLink>

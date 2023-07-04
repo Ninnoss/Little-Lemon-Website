@@ -12,8 +12,8 @@ import footerLogo from '../assets/Imgs/Footer-Logo-White.webp';
 import FlyingPasta from '../assets/Imgs/Flying-Pasta.webp';
 import pastaFork from '../assets/Imgs/Pasta-Fork.webp';
 import pizza from '../assets/Imgs/pizza.png';
-import nat from '../assets/Imgs/Pizza-flying-stuff-nat.png';
-
+import flyingPizza from '../assets/Imgs/Flying-Pizza.webp';
+import meal from '../assets/Imgs/meal.mp4';
 import menuBg from '../assets/Imgs/Menu-Page/Restaurant atmosphere.webp';
 import greenLemonBg from '../assets/Imgs/Menu-Page/Green-lemon-bg.webp';
 
@@ -37,7 +37,8 @@ export default {
   FlyingPasta,
   pastaFork,
   pizza,
-  nat,
+  flyingPizza,
+  meal,
   menuBg,
   greenLemonBg,
   aboutBg,
