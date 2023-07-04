@@ -6,7 +6,7 @@ import marioAdrianA from '../assets/Imgs/Mario and Adrian A.webp';
 import marioAdrianB from '../assets/Imgs/Mario and Adrian b.webp';
 import restauranFood from '../assets/Imgs/restauranfood.jpg';
 import italianDishes from '../assets/Imgs/pg-italian-dishes.webp';
-import restaurant from '../assets/Imgs/restaurant.jpg';
+import restaurant from '../assets/Imgs/restaurant.webp';
 import headerLogo from '../assets/Imgs/Header-logo-yellow.svg';
 import footerLogo from '../assets/Imgs/Footer-Logo-White.webp';
 import FlyingPasta from '../assets/Imgs/Flying-Pasta.webp';
