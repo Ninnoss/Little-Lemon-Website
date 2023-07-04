@@ -17,6 +17,11 @@ import nat from '../assets/Imgs/Pizza-flying-stuff-nat.png';
 import menuBg from '../assets/Imgs/Menu-Page/Restaurant atmosphere.webp';
 import greenLemonBg from '../assets/Imgs/Menu-Page/Green-lemon-bg.webp';
 
+import aboutBg from '../assets/Imgs/About-Page/about-bg.webp';
+import cuisines from '../assets/Imgs/About-Page/Cuisines.webp';
+import makingPizza from '../assets/Imgs/About-Page/Making-pizza.webp';
+import italianMenu from '../assets/Imgs/About-Page/Italian-menu.webp';
+
 export default {
   greekSalad,
   lemonDessert,
@@ -35,4 +40,8 @@ export default {
   nat,
   menuBg,
   greenLemonBg,
+  aboutBg,
+  cuisines,
+  makingPizza,
+  italianMenu,
 };
