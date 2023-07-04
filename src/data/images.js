@@ -22,6 +22,9 @@ import cuisines from '../assets/Imgs/About-Page/Cuisines.webp';
 import makingPizza from '../assets/Imgs/About-Page/Making-pizza.webp';
 import italianMenu from '../assets/Imgs/About-Page/Italian-menu.webp';
 
+import notFound from '../assets/Imgs/404.webp';
+import powerOut from '../assets/Imgs/power-out.webp';
+
 export default {
   greekSalad,
   lemonDessert,
@@ -45,4 +48,6 @@ export default {
   cuisines,
   makingPizza,
   italianMenu,
+  notFound,
+  powerOut,
 };

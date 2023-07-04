@@ -19,13 +19,15 @@ const MobileNavbar = ({ setToggleMenu }) => {
         className="flex flex-col items-center justify-center  space-y-3 text-2xl md:text-3xl  text-primaryGreen font-bold font-markazi ">
         <li className="hover:text-lightOrange">
           <NavLink
-            to={'/home'}
+            onClick={() => setToggleMenu(false)}
+            to={'/'}
             role="menuitem">
             Home
           </NavLink>
         </li>
         <li className="hover:text-lightOrange">
           <NavLink
+            onClick={() => setToggleMenu(false)}
             to={'/about'}
             role="menuitem">
             About
@@ -33,6 +35,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
         </li>
         <li className="hover:text-lightOrange">
           <NavLink
+            onClick={() => setToggleMenu(false)}
             to={'/menu'}
             role="menuitem">
             Menu
@@ -40,6 +43,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
         </li>
         <li className="hover:text-lightOrange">
           <NavLink
+            onClick={() => setToggleMenu(false)}
             to={'/reservation'}
             role="menuitem">
             Reservation
@@ -47,6 +51,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
         </li>
         <li className="hover:text-lightOrange">
           <NavLink
+            onClick={() => setToggleMenu(false)}
             to="/menu"
             role="menuitem">
             Order Online
@@ -54,6 +59,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
         </li>
         <li className="hover:text-lightOrange">
           <NavLink
+            onClick={() => setToggleMenu(false)}
             to={'/login'}
             role="menuitem">
             Log In

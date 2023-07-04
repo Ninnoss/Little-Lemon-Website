@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Menu from './pages/Menu';
 import Reservation from './pages/Reservation';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
         <Route
           path="/reservation"
           element={<Reservation />}
+        />
+        <Route
+          path="*"
+          element={<NotFound />}
         />
       </Routes>
 
