@@ -52,7 +52,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
         <li className="hover:text-lightOrange">
           <NavLink
             onClick={() => setToggleMenu(false)}
-            to="/menu"
+            to="/orderonline"
             role="menuitem">
             Order Online
           </NavLink>

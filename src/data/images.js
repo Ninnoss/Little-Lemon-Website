@@ -14,14 +14,18 @@ import pastaFork from '../assets/Imgs/Pasta-Fork.webp';
 import pizza from '../assets/Imgs/pizza.png';
 import flyingPizza from '../assets/Imgs/Flying-Pizza.webp';
 import meal from '../assets/Imgs/meal.mp4';
+
+// menu page
 import menuBg from '../assets/Imgs/Menu-Page/Restaurant atmosphere.webp';
 import greenLemonBg from '../assets/Imgs/Menu-Page/Green-lemon-bg.webp';
 
+// about page
 import aboutBg from '../assets/Imgs/About-Page/about-bg.webp';
 import cuisines from '../assets/Imgs/About-Page/Cuisines.webp';
 import makingPizza from '../assets/Imgs/About-Page/Making-pizza.webp';
 import italianMenu from '../assets/Imgs/About-Page/Italian-menu.webp';
 
+// Not Found page
 import notFound from '../assets/Imgs/404.webp';
 import powerOut from '../assets/Imgs/power-out.webp';
 

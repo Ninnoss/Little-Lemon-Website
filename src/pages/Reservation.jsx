@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 const TableReservation = () => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger once when the element enters the viewport
-    threshold: 0.2, // The threshold of how much of the element is in view
+    threshold: 0.01, // The threshold of how much of the element is in view
   });
 
   const animationClass = inView ? 'active' : ''; // Add the 'active' class when the element is in view
