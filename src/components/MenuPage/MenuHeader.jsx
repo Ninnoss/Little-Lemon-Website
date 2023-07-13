@@ -18,7 +18,7 @@ const MenuHeader = () => {
         <figure className="max-w-screen-lg mt-4">
           <img
             className="h-80 md:h-[30rem]"
-            src={images.menuBg}
+            src={images.menuAtmoshphere}
             alt="Restaurant Atmosphere"
           />
           <figcaption className="sr-only">Restaurant Atmosphere</figcaption>

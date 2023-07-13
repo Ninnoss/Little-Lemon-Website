@@ -4,7 +4,7 @@ import { MdOutlineRestaurantMenu } from 'react-icons/md';
 
 const MobileNavbar = ({ setToggleMenu }) => {
   return (
-    <div
+    <nav
       role="dialog"
       aria-modal="true"
       className="fixed top-0 left-0 w-full h-full bg-highlightGrey flex justify-center items-center slide-bottom z-10  ">
@@ -66,7 +66,7 @@ const MobileNavbar = ({ setToggleMenu }) => {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

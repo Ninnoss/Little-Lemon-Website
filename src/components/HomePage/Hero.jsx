@@ -39,8 +39,8 @@ const Hero = () => {
       <figure>
         <img
           className="w-[700px] opacity-80"
-          src={images.flyingPizza}
-          alt="Pizza dish"
+          src={images.heroPizza}
+          alt="Pizza dish at Little Lemon"
         />
         <figcaption className="sr-only">Pizza dish at Little Lemon</figcaption>
       </figure>

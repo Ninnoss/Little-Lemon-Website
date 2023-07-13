@@ -26,12 +26,12 @@ const TableReservation = () => {
           ref={ref}
           className={`reveal ${animationClass}`}>
           <img
-            src={images.restaurant}
+            src={images.restaurantView}
             className="rounded-lg w-[300px] sm:w-[350px] h-[300px] "
-            alt="Restaurant Atmoshphere"
+            alt="Restaurant View"
             loading="lazy"
           />
-          <figcaption className="sr-only">Restaurant Atmoshphere</figcaption>
+          <figcaption className="sr-only">Restaurant View</figcaption>
         </figure>
 
         <figure

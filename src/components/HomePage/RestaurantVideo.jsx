@@ -10,7 +10,7 @@ const RestaurantVideo = () => {
     <div className="h-[50vh] sm:h-[75vh] lg:h-screen relative">
       <video
         ref={vidRef}
-        src={images.meal}
+        src={images.mealVideo}
         type="video/mp4"
         loop
         controls={false}
