@@ -39,7 +39,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* About page: revealing the content */
@@ -54,3 +54,18 @@
   transform: translateY(0px);
   opacity: 1;
 }
+
+/* .skeleton {
+  background-image: linear-gradient(90deg, #eee 0%, #eee 40%, #ddd 50%, #ddd 55%, #eee 65%, #eee 100%);
+  background-size: 400%;
+  animation: skeleton 3s infinite;
+}
+
+@keyframes skeleton {
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: 0%;
+  }
+} */
