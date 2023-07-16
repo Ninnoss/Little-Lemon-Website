@@ -4,7 +4,7 @@ import { LuAlarmClock } from 'react-icons/lu';
 import { FaAngleDown } from 'react-icons/fa';
 import { useState, useRef, useEffect } from 'react';
 import useOutsideClick from '../../../hooks/useOutsideClick';
-import { fetchAPI } from '../../../data/BookingAPI';
+import { fetchAPI } from '../../../data/fakeAPI';
 
 const TimePicker = ({ selectedTime, setSelectedTime, selectedDate }) => {
   const [showOptions, setShowOptions] = useState(false);

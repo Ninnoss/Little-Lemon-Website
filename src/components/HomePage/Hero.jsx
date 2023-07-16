@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="md:mt-8">
           <Link to="/reservation">
             <Button
-              className="mt-4 px-6 hover:bg-lightOrange"
+              className="mt-4 px-5 py-2.5 md:text-lg  hover:bg-lightOrange"
               type="button"
               role="link"
               aria-label="Reserve Table">
@@ -39,8 +39,8 @@ const Hero = () => {
       <figure>
         <img
           className="w-[700px] opacity-80"
-          src={images.flyingPizza}
-          alt="Pizza dish"
+          src={images.heroPizza}
+          alt="Pizza dish at Little Lemon"
         />
         <figcaption className="sr-only">Pizza dish at Little Lemon</figcaption>
       </figure>

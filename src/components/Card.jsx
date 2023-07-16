@@ -7,6 +7,7 @@ const Card = ({ name, price, img, description }) => {
         <img
           className="rounded-t-lg max-h-[200px] w-full"
           src={img}
+          loading='lazy'
           alt={`Image of ${name}`}
         />
         <figcaption className="sr-only">{name}</figcaption>

@@ -4,7 +4,7 @@ import UserInfoWrapper from './UserInfoWrapper';
 import LoadingAndConfirmation from './LoadingAndConfirmationMsgs/LoadingAndConfirmation';
 import SubmitButton from './SubmitButton';
 import { formatDate } from '../../utils/formatDate';
-import { submitAPI } from '../../data/BookingAPI';
+import { submitAPI } from '../../data/fakeAPI';
 
 const ReservationForm = () => {
   // Form controlled Inputs state object (plus loading and confirmation msg states)

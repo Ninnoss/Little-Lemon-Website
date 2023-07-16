@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 const TableReservation = () => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Only trigger once when the element enters the viewport
-    threshold: 0.01, // The threshold of how much of the element is in view
+    threshold: 0.1, // The threshold of how much of the element is in view
   });
 
   const animationClass = inView ? 'active' : ''; // Add the 'active' class when the element is in view
@@ -26,12 +26,12 @@ const TableReservation = () => {
           ref={ref}
           className={`reveal ${animationClass}`}>
           <img
-            src={images.restaurant}
+            src={images.restaurantView}
             className="rounded-lg w-[300px] sm:w-[350px] h-[300px] "
-            alt="Restaurant Atmoshphere"
+            alt="Restaurant View"
             loading="lazy"
           />
-          <figcaption className="sr-only">Restaurant Atmoshphere</figcaption>
+          <figcaption className="sr-only">Restaurant View</figcaption>
         </figure>
 
         <figure

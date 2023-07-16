@@ -8,7 +8,7 @@ import DinersPicker from './DataPickers/DinersPicker';
 const ReservationDataPickers = ({ selectedSeating, selectedDate, selectedTime, selectedOccasion, selectedDiners, onReservationDataChange }) => {
   return (
     <>
-      <fieldset className="flex flex-col items-center sm:flex-row sm:justify-between ">
+      <fieldset className="flex flex-col items-center sm:flex-row sm:justify-between sm:mb-4">
         <RadioButtons
           selectedSeating={selectedSeating}
           onSeatingChange={(value) => onReservationDataChange('selectedSeating', value)}

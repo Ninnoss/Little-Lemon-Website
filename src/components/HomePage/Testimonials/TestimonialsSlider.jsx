@@ -24,6 +24,7 @@ const TestimonialsSlider = () => {
               className="w-16 h-16 rounded-full object-cover"
               src={testimonialsData[currentReview].image}
               alt={testimonialsData[currentReview].name}
+              loading="lazy"
             />
             <figcaption className="ml-4">
               <h3
@@ -41,7 +42,7 @@ const TestimonialsSlider = () => {
               color="#9CA3AF"
               className="self-center mb-4"
             />
-            <p className='text-primaryGreen font-karla '>&quot;{testimonialsData[currentReview].review}&quot;</p>
+            <p className="text-primaryGreen font-karla ">&quot;{testimonialsData[currentReview].review}&quot;</p>
           </blockquote>
         </article>
 

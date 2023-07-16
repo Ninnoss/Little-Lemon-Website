@@ -13,7 +13,7 @@ const AboutHero = () => {
         <div className="absolute top-32 left-8 lg:left-14">
           <div>
             <div>
-              <h1 className="text-lightOrange text-3xl sm:text-4xl md:text-5xl lg:text-6xl capitalize font-bold pb-14">
+              <h1 className="text-lightOrange text-4xl md:text-5xl lg:text-6xl capitalize font-bold pb-14">
                 It's not just food,
                 <br />
                 it's an experience
