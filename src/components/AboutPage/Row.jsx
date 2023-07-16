@@ -21,9 +21,9 @@ const Row = ({ title, description, imageSrc, imageAlt, isLTR }) => {
 
         <figure className={`flex justify-center md:w-1/2  pb-8`}>
           <img
-            loading="lazy"
             className={`w-12/12 min-[550px]:w-11/12 sm:w-10/12 lg:w-9/12 rounded-md lg:relative ${!isLTR ? 'lg:top-4' : ''} 'lg:top-10'`}
             src={imageSrc}
+            loading="lazy"
             alt={imageAlt}
           />
           <figcaption className="sr-only">{imageAlt}</figcaption>

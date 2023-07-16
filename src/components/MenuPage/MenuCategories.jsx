@@ -1,19 +1,18 @@
 import MenuItem from '../MenuPage/MenuItem';
 import { menuItems } from '../../data/menuItems';
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 
 const MenuCategories = () => {
   const categoryBtns = ['Appetizers', 'Food', 'Drinks', 'Desserts'];
 
   const [selectedCategory, setSelectedCategory] = useState('Appetizers');
 
-  const handleCategoryClick = (category) => {
+  const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
 
-  const itemsToDisplay = useMemo(() => {
-    return menuItems.filter((item) => item.category === selectedCategory);
-  }, [selectedCategory]);
+  const itemsToDisplay = menuItems.filter((item) => item.category === selectedCategory);
+
   return (
     <>
       {/* Categories */}
@@ -21,13 +20,14 @@ const MenuCategories = () => {
         {categoryBtns.map((category) => (
           <button
             key={category}
-            onClick={() => handleCategoryClick(category)}
+            onClick={() => handleCategoryChange(category)}
             className={`cursor-pointer text-xl md:text-3xl font-markazi font-bold hover:text-lightOrange  
             ${selectedCategory === category ? 'text-lightOrange' : 'text-primaryGreen'}`}>
             {category}
           </button>
         ))}
       </nav>
+
       {/* Menu Items */}
       <div className="py-10 px-5 flex justify-center flex-wrap gap-10">
         {itemsToDisplay.map((item) => (

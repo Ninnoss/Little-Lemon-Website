@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="md:mt-8">
           <Link to="/reservation">
             <Button
-              className="mt-4 px-6 hover:bg-lightOrange"
+              className="mt-4 px-5 py-2.5 md:text-lg  hover:bg-lightOrange"
               type="button"
               role="link"
               aria-label="Reserve Table">

@@ -20,6 +20,7 @@ const AboutUs = () => {
           <img
             className="h-80"
             src={images.marioAdrianA}
+            loading="lazy"
             alt="The Chefs Mario and Adrian"
           />
           <figcaption className="sr-only">The Chefs Mario and Adrian</figcaption>
@@ -28,6 +29,7 @@ const AboutUs = () => {
           <img
             className="h-80 w-full"
             src={images.restauranFood}
+            loading="lazy"
             alt="Restaurant food"
           />
           <figcaption className="sr-only">Restaurant food</figcaption>

@@ -10,11 +10,12 @@ const Testimonials = () => {
         <TestimonialsSlider />
         <figure className="mt-10">
           <img
-            className="h-[600px] w-[500px]"
+            className="h-[530px] w-[500px]"
             src={images.FlyingPasta}
-            alt="Delicious Flying Pasta"
+            loading="lazy"
+            alt="Delicious Pasta"
           />
-          <figcaption className="text-primaryGreen  text-center relative bottom-14 font-medium italic">Our delicious Flying Pasta dish</figcaption>
+          <figcaption className="text-primaryGreen  text-center relative bottom-14 font-medium italic">Our delicious Pasta dish</figcaption>
         </figure>
       </div>
     </section>

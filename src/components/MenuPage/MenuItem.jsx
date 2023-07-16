@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 
-// eslint-disable-next-line react/prop-types
 const MenuItem = ({ img, name }) => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -15,9 +15,7 @@ const MenuItem = ({ img, name }) => {
   return (
     <div className="relative hover:cursor-pointer group">
       {isLoading ? (
-        <div className="h-36 sm:h-52 w-72 md:w-96 bg-gray-200 animate-pulse rounded-2xl">
-          <div className="bg-gradient-to-r from-gray-200/50  to-gray-300 animate-pulse h-full rounded-2xl" />
-        </div>
+        <div className="h-36 sm:h-52 w-72 md:w-96 skeleton rounded-2xl "></div>
       ) : (
         <figure>
           <img
@@ -26,7 +24,7 @@ const MenuItem = ({ img, name }) => {
             alt={name}
             loading="lazy"
           />
-          <figcaption className="sr-only">Restaurant Menu</figcaption>
+          <figcaption className="sr-only">{name}</figcaption>
         </figure>
       )}
       <h3 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold font-karla text-3xl w-full text-center text-white">{name}</h3>

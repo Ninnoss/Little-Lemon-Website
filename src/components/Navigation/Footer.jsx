@@ -18,6 +18,7 @@ const Footer = () => {
               <figure>
                 <img
                   src={images.footerLogo}
+                  loading="lazy"
                   alt="Little Lemon Footer Logo"
                   className="h-32 md:h-44 w-auto"
                 />
