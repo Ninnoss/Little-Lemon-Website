@@ -1,15 +1,7 @@
 import ReservationForm from '../components/ReservationPage/ReservationForm';
 import images from '../data/images';
-import { useInView } from 'react-intersection-observer';
 
 const TableReservation = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger once when the element enters the viewport
-    threshold: 0.1, // The threshold of how much of the element is in view
-  });
-
-  const animationClass = inView ? 'active' : ''; // Add the 'active' class when the element is in view
-
   return (
     <section>
       <div className="pb-32 px-8 md:px-24 lg:px-52 xl:px-80 py-10 bg-primaryGreen bg-cover bg-center">
@@ -21,10 +13,8 @@ const TableReservation = () => {
         We are waiting for you here at Little Lemon!
       </h2>
 
-      <div className="bg-highlightGrey  pt-12 pb-28 px-4 flex flex-col sm:flex-row items-center justify-center gap-8">
-        <figure
-          ref={ref}
-          className={`reveal ${animationClass}`}>
+      <div className="bg-highlightGrey pt-12 pb-28 px-4 flex flex-col sm:flex-row items-center justify-center gap-8">
+        <figure>
           <img
             src={images.restaurantView}
             className="rounded-lg w-[300px] sm:w-[350px] h-[300px] "
@@ -34,9 +24,7 @@ const TableReservation = () => {
           <figcaption className="sr-only">Restaurant View</figcaption>
         </figure>
 
-        <figure
-          ref={ref}
-          className={`reveal ${animationClass}`}>
+        <figure>
           <img
             src={images.restauranFood}
             className="rounded-lg w-[300px] sm:w-[350px] h-[300px]"
@@ -46,9 +34,7 @@ const TableReservation = () => {
           <figcaption className="sr-only">Restaurant Food</figcaption>
         </figure>
 
-        <figure
-          ref={ref}
-          className={`reveal ${animationClass}`}>
+        <figure>
           <img
             src={images.marioAdrianA}
             className="rounded-lg w-[300px] sm:w-[350px] h-[300px]"

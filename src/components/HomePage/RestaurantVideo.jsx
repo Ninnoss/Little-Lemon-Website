@@ -31,6 +31,7 @@ const RestaurantVideo = () => {
         muted={true}
         width="100%"
         height="100%"
+        forcevideo="true"
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <div
