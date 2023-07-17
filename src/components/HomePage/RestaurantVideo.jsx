@@ -11,7 +11,9 @@ const RestaurantVideo = () => {
   };
 
   return (
-    <div className="relative overlay">
+    <div
+      onClick={handleVideoToggle}
+      className="relative overlay">
       <ReactPlayer
         url={images.mealVideo}
         playing={playVideo}
@@ -26,8 +28,7 @@ const RestaurantVideo = () => {
         <div
           className={`w-20 h-20 rounded-full border-2 border-yellow-400 flex items-center justify-center cursor-pointer
           ${playVideo ? 'opacity-50' : 'opacity-100'}
-          `}
-          onClick={handleVideoToggle}>
+          `}>
           {playVideo ? (
             <BsPauseFill
               color="#fff"
