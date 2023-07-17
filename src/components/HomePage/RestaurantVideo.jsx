@@ -1,28 +1,17 @@
-import { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import { useState } from 'react';
 import ReactPlayer from 'react-player/file';
 import { BsFillPlayFill, BsPauseFill } from 'react-icons/bs';
 import images from '../../data/images';
 
 const RestaurantVideo = () => {
   const [playVideo, setPlayVideo] = useState(false);
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    setPlayVideo(inView);
-  }, [inView]);
 
   const handleVideoToggle = () => {
     setPlayVideo(!playVideo);
   };
 
   return (
-    <div
-      ref={ref}
-      className="relative overlay">
+    <div className="relative overlay">
       <ReactPlayer
         url={images.mealVideo}
         playing={playVideo}
@@ -35,7 +24,9 @@ const RestaurantVideo = () => {
       />
       <div className="absolute inset-0 flex items-center justify-center">
         <div
-          className="w-20 h-20 rounded-full border-2 border-yellow-400 flex items-center justify-center cursor-pointer"
+          className={`w-20 h-20 rounded-full border-2 border-yellow-400 flex items-center justify-center cursor-pointer
+          ${playVideo ? 'opacity-50' : 'opacity-100'}
+          `}
           onClick={handleVideoToggle}>
           {playVideo ? (
             <BsPauseFill
